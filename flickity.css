@@ -84,18 +84,21 @@ https://flickity.metafizzy.co
   border-radius: 50%!important;
   /* vertically center */
   transform: translateY(-50%);
+  opacity: 0;
 }
 
-.flickity-prev-next-button.previous { left: 2px; }
-.flickity-prev-next-button.next { right: 2px; }
+.flickity-prev-next-button.previous { left: 2px; opacity: 0;}
+.flickity-prev-next-button.next { right: 2px; opacity: 0;}
 /* right to left */
 .flickity-rtl .flickity-prev-next-button.previous {
   left: auto;
   right: 10px;
+  opacity: 0;
 }
 .flickity-rtl .flickity-prev-next-button.next {
   right: auto;
   left: 10px;
+  opacity: 0;
 }
 
 .flickity-prev-next-button .flickity-button-icon {
@@ -105,6 +108,7 @@ https://flickity.metafizzy.co
   width: 60%;
   height: 60%;
   transform: rotateY(10deg);
+  opacity: 0;
 }
 
 /* ---- page dots ---- */
