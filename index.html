@@ -58,6 +58,25 @@ body{
   -webkit-touch-callout: none;
    	/*background: radial-gradient(ellipse at center, #f5f5f5 0%,#ddd 100%);*/
    	overflow-x: hidden;
+   	overflow-y:auto;
+}
+::-webkit-scrollbar{
+	width: 10px;
+	background: #fff;
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 0;
+}
+::-webkit-scrollbar-thumb {
+  background: #fff; 
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 0;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  opacity: 0.7; 
 }
 		.head{
 	width: 100%;
@@ -68,17 +87,32 @@ body{
 	text-transform: uppercase;
 	align-items: center!important;
 	justify-content: center!important;
+	padding-left: 1vw;
+}
+.head12{
+	width: 100%;
+	background-color: #333;
+	position: fixed;
+	object-fit: cover;
+	height: 7vh;
+	text-transform: uppercase;
+	align-items: center!important;
+	justify-content: center!important;
+	top: 0;
+	z-index: 1000000000000000;
 }
 .tel{
 	font-size: 1.2445095168374818vw;
-	/*letter-spacing: -1pt;*/
 	font-family: Montserrat;
 	color: rgb(237, 237, 237);
 	text-align: center;
+	transform: translateY(-0.5vh);
+	transition: .3s;
 }
 .tel:hover{
 	text-decoration: none;
 	text-underline-position: none;
+	color: rgba(95, 174, 176, 0.7);
 }
 .tel2{
 	font-size: 12px;
@@ -87,12 +121,12 @@ body{
 	color: rgb(237, 237, 237);
 	transform: translateY(5px);
 /*	transform: translateX(-1px);*/
-	
+	z-index: 90000000000000000000000;
 }
 .phtel{
 	font-size: 2.335vw;
 	color: rgb(95, 174, 176);
-	transform: translateY(7px);
+	transform: translateY(13%);
 }
 .phtell{
 	font-size: 19px;
@@ -104,15 +138,29 @@ body{
 .location{
 	font-size: 2.255vw;
 	color: rgb(95, 174, 176);
-	transform: translateY(7px);
-	transform: translateX(10px;);
+	transform: translateY(13%);
 }
 .location1{
 	font-size: 1.2445095168374818vw;
-	/*letter-spacing: -1pt;*/
 	font-family: Montserrat;
 	color: rgb(237, 237, 237);
 	text-align: center; 
+	transform: translateY(-0.5vh);
+	transition: .3s;
+}
+.location1:hover{
+	color: rgba(95, 174, 176, 0.7);
+}
+.location11{
+	font-size: 1.2445095168374818vw;
+	font-family: Montserrat;
+	color: rgb(237, 237, 237);
+	text-align: center; 
+	transform: translateY(-0.1vh);
+	transition: .3s;
+}
+.location11:hover{
+	color: rgba(95, 174, 176, 0.7);
 }
 .langu{
 	color: rgb(237, 237, 237);
@@ -126,34 +174,36 @@ body{
 	color: rgb(95, 174, 176);
 	font-size: 1.6837481698389458vw;
 	letter-spacing: 1.0980966325036603vw;
+	transition: .3s;
 	
 }
 .lang1:hover{
 	text-decoration: none;
-	opacity: 0.6;
-	font-weight: bold;
+	color: rgb(237, 237, 237);
 }
 .lang{
 	color: rgb(237, 237, 237);
-	font-size: 1.171303074670571vw;
-
+	font-size: 1.1vw;
+	position: relative;
+	letter-spacing: 1px;
 }
 .lang:hover{
 	text-decoration: none;
 	text-underline-position: none;
 }
 .lang5{
-	color: rgb(237, 237, 237);
+	color: rgba(237, 237, 237, 0.85);
 	font-size: 10px;
-
+	padding: 0;
+	margin: 0;
+}
+.lang55{
+	font-size: 3px;
 }
 .lll{
 	right: 0;
 	position: absolute;
-
 	bottom: 0;
-	
-
 }
 .ll2{
 	position: absolute;}
@@ -891,9 +941,9 @@ justify-content: center!important;
   right: 0;
   padding: 5%;
 }
-.animate__animated {
+/*.animate__animated {
 	animation-delay: 5.2s!important;
-}
+}*/
 .iconscar{
 	font-size: 12pt;
 	border-style: solid;
@@ -1316,6 +1366,9 @@ margin-top: 10vh;
   text-align: center;
   display: flex;
 }
+social-icon-phone{
+	transform: rotate(100deg)!important;
+}
 .icons .social-icon {
   text-decoration: none;
   color: white;
@@ -1440,13 +1493,28 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', end
 		font-family: Montserrat;
 		text-align: center;
 		color: #333;
+		flex-wrap: nowrap;
 
+	}
+	.butt-go1{
+		border-style: solid;
+		border-width: 1px;
+		border-color: #2c3e50;
+		justify-content: center;
+		align-items: center;
+		width: 29vw;
+		height: 5vh;
+		font-size: 14pt;
+		font-family: Montserrat;
+		text-align: center;
+		color: #333;
+		flex-wrap: nowrap;
 	}
 	.modal-footer{
 		justify-content: center!important;
 	}
 	.close{
-		font-size: 2.5vw;
+		font-size: 17pt;
 		color: maroon;
 	}
 	.cafuy{
@@ -1479,16 +1547,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', end
 </div> -->
 	<div class="hidden-xs">
 		<div class="head">
-			<div class="container-fluid">
+	<div class="container-fluid">
 				<div class="row">
 					<div class="col-md-12 ll2">
-						<a href="tel:+998712741630" class="glyphicon glyphicon-phone-alt phtel hidden-xs"> </a>
+						<i class="glyphicon glyphicon-phone-alt location hidden-xs"> </i>
 						<span style="color: #333; font-size: 2pt;">A</span>
-						<a href="tel:+998712741630" class="hidden-xs tel">+998 71 247 16 30</a>
+						<a href="tel:+998712741630" class="hidden-xs location1">+998 71 247 16 30</a>
 						<span style="color: #333; font-size: 10pt">lorem</span>
-						<a href="#" class="fa fa-map-marker location hidden-xs"> </a>
+						<i class="fa fa-map-marker location hidden-xs"> </i>
 						<span style="color: #333; font-size: 2pt;">A</span>
-						<a href="https://goo.gl/maps/L3unbmyzrpCVJeTs5" type="button" class="hidden-xs location1" data-toggle="modal" data-target="#exampleModal">
+						<a href="https://goo.gl/maps/L3unbmyzrpCVJeTs5" type="button" class="hidden-xs location11" data-toggle="modal" data-target="#exampleModal">
   DIRECTION
 </a>
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -1516,12 +1584,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', end
 								<span style="color: #333; font-size: 8pt;">lorem</span>
 								<a href="#" class="lang">UZ  </a>
 								<span class="lang"> | </span>
-								<span class="lang" style="color: darkgray;"> RU </span>
+								<span class="lang" style="color: #333; opacity: 0;"> RU </span>
 							</khan>
 					</div>	
 				</div>	
 			</div>
-		</div>
+</div>
 	</div>
 		<div class="headd visible-xs-inline-block "> 
 			<div class="container-fluid ">
@@ -1533,11 +1601,31 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', end
 						<span style="color: #333; font-size: 7pt">lorem</span>
 						<a href="#" class="fa fa-map-marker phtell visible-xs-inline-block"> </a>
 						<span style="color: #333; font-size: 2pt;">A</span>
-						<a href="https://goo.gl/maps/L3unbmyzrpCVJeTs5" class="visible-xs-inline-block tel2">DIRECTION</a>
+						<a href="https://goo.gl/maps/L3unbmyzrpCVJeTs5" type="button" class="visible-xs-inline-block tel2" data-toggle="modal" data-target="#exampleModal1">
+  DIRECTION
+</a>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="exampleModalLabel">Waiting for your permission</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+   
+      <div class="modal-footer">
+        <a href="https://goo.gl/maps/L3unbmyzrpCVJeTs5" class="butt-go1"><i class="fab fa-google"></i> Maps</a>
+      </div>
+    </div>
+  </div>
+</div>
 							<khan class="lll">
 								<a href="#" class="lang5">UZ  </a>
 								<span class="lang5"> | </span>
-								<span class="lang5" style="color: darkgray;"> RU</span>
+								<span class="lang55" style="color: #333;"> RU</span>
 							</khan>
 					</div>
 				</div>
@@ -2251,7 +2339,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', end
   <a target="_blank" href="" class="fab fa-telegram stumbleupon social-icon"></a>
   <a target="_blank" href="" class="fab fa-facebook google-plus social-icon"></a>
 </div>
-
+<a href="#####" class="fa fa-phone social-icon social-icon-phone"></a>
 				</div>
 			</div>
 			<hr class="hrbot">
