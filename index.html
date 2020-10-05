@@ -89,18 +89,6 @@ body{
 	justify-content: center!important;
 	padding-left: 1vw;
 }
-.head12{
-	width: 100%;
-	background-color: #333;
-	position: fixed;
-	object-fit: cover;
-	height: 7vh;
-	text-transform: uppercase;
-	align-items: center!important;
-	justify-content: center!important;
-	top: 0;
-	z-index: 1000000000000000;
-}
 .tel{
 	font-size: 1.2445095168374818vw;
 	font-family: Montserrat;
@@ -120,7 +108,8 @@ body{
 	font-family: Montserrat;
 	color: rgb(237, 237, 237);
 	transform: translateY(5px);
-	z-index: 10;
+/*	transform: translateX(-1px);*/
+
 }
 .phtel{
 	font-size: 2.335vw;
@@ -215,7 +204,7 @@ a:hover{
 	width: 100%;
 	background-color: #333;
 	/*transform: translateY(-10px);*/
-
+	z-index: 100000;
 	height: 35px;
 	text-transform: uppercase;
 }
@@ -496,7 +485,7 @@ section.ok{
 	width: 60%;
 	right: 0;
 	font-size: 1.5vw; 
-	z-index: 10000000000;
+	z-index: 10000;
 }
 .alert2{
 	background: #333!important;
@@ -507,7 +496,7 @@ section.ok{
 	width: 66%;
 	right: 0;
 	font-size: 2.5vw; 
-	z-index: 10000000000;
+	z-index: 10000;
 }
 .close1{
 	color: white!important;
@@ -1502,11 +1491,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', end
 		justify-content: center;
 		align-items: center;
 		width: 29vw;
-		height: 4.5vh;
+		height: 4.7vh;
 		font-size: 14pt;
 		font-family: Montserrat;
 		text-align: center;
 		color: #333;
+		padding: 0;
 		flex-wrap: nowrap;
 		align-items: center;
 	}
@@ -1556,7 +1546,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', end
 						<span style="color: #333; font-size: 10pt">lorem</span>
 						<i class="fa fa-map-marker location hidden-xs"> </i>
 						<span style="color: #333; font-size: 2pt;">A</span>
-						<a href="https://goo.gl/maps/L3unbmyzrpCVJeTs5" type="button" class="hidden-xs location11" data-toggle="modal" data-target="#exampleModal">
+						<a href="##" type="button" class="hidden-xs location11" data-toggle="modal" data-target="#exampleModal">
   DIRECTION
 </a>
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -1601,10 +1591,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', end
 						<span style="color: #333; font-size: 7pt">lorem</span>
 						<a href="#" class="fa fa-map-marker phtell visible-xs-inline-block"> </a>
 						<span style="color: #333; font-size: 2pt;">A</span>
-						<a href="##" type="" class="visible-xs-inline-block tel2" data-toggle="modal" data-target="#exampleModal">
+						<a href="##" type="" class="visible-xs-inline-block tel2" data-toggle="modal" data-target="#exampleModal1">
   DIRECTION
 </a>
-
 <!-- Modal -->
 <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
